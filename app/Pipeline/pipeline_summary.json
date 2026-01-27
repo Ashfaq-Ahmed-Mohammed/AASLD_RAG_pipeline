@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-11-17T05:17:41.401665",
+  "total_json_files": 49,
+  "files_successfully_loaded": 44,
+  "total_sections_extracted": 1507,
+  "total_chunks": 12776,
+  "embedding_dimension": 768,
+  "embedding_dtype": "float32",
+  "embedding_size_mb": 37.43,
+  "model_name": "pritamdeka/S-Bluebert-snli-multinli-stsb",
+  "device": "CUDA",
+  "chunking_config": {
+    "chunk_size": 512,
+    "chunk_overlap": 25
+  },
+  "gpu_info": {
+    "type": "T4 (Google Colab)",
+    "batch_size": 256
+  }
+}

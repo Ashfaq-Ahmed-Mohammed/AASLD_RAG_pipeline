@@ -1,0 +1,15 @@
+MEDICAL DATA PIPELINE OUTPUT INDEX
+==================================================
+
+Generated: 2025-11-17T05:17:41.402272
+
+FILES:
+ - embeddings.npy: 12776 chunks × 768 dimensions
+ - chunks_metadata.json: Full text and metadata for each chunk
+ - pipeline_summary.json: Detailed statistics
+
+STATISTICS:
+ - JSON files processed: 49
+ - Sections extracted: 1507
+ - Chunks created: 12,776
+ - Embedding size: 37.43 MB
