@@ -36,7 +36,7 @@ def initialize_llm_client() -> None:
             token=llm_settings.hf_token
         )
         
-        logger.info(f"✓ LLM client initialized: {llm_settings.llm_model_name}")
+        logger.info(f"LLM client initialized: {llm_settings.llm_model_name}")
         
     except Exception as e:
         logger.error(f"Failed to initialize LLM client: {e}")
