@@ -2,6 +2,7 @@ from app.database.database import SessionDep
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlmodel import select
 from app.database.database import User
+from app.oauth2 import get_current_user
 from app.utilities import get_password_hash
 from app.models.models import UserRead, UserCreate
 
@@ -21,7 +22,7 @@ def create_user(user: UserCreate, session: SessionDep):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="User could not be created.")
     
 @router.get("/{user_id}", response_model=UserRead)
-def read_user(user_id: int, session: SessionDep):
+def read_user(user_id: int, session: SessionDep, current_user: User = Depends(get_current_user)):
     user = session.exec(select(User).where(User.id == user_id)).first()
     if not user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found.")
