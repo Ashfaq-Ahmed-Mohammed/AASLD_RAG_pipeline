@@ -42,7 +42,7 @@ class ReRanker(BaseSettings):
 
 class LLM_Setting(BaseSettings):
     llm_model_name: str = 'meta-llama/Llama-3.2-3B-Instruct'
-    hf_token: Optional[str] = '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'
+    hf_token: Optional[str] = 'bbcc'
     default_temperature: float = 0.1
     default_max_tokens: int = 256
     max_content_chars: int = 1000
